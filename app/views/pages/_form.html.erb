@@ -1,0 +1,8 @@
+<%= simple_form_for @page do |f| %>
+  <%= hidden_field_tag :return_to, params[:return_to] %>
+  <%= f.simple_fields_for :sections do |g| %>
+    <h3><%= g.object.identifier %></h3>
+    <%= g.input :body, :label => false, :input_html => {:editor => true} %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
