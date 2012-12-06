@@ -3,7 +3,7 @@ module EditablePages
     respond_to :html
 
     def index
-      @pages = Page.all
+      @pages = Page.scoped
     end
 
     def edit
