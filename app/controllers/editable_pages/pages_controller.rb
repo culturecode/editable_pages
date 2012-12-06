@@ -12,8 +12,11 @@ module EditablePages
 
     def update
       @page = Page.find(params[:id])
-      flash[:notice] = 'User was successfully created.' if @page.update_attributes(params[:page])
-      respond_with(@page)
+      @page.update_attributes!(params[:editable_pages_page])
+      redirect_to params[:return_to] || :back, :notice => 'Page updated'
+    
+    rescue ActiveRecord::RecordInvalid
+      render :edit
     end
   end
 end
