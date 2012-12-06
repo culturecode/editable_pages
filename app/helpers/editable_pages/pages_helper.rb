@@ -1,7 +1,7 @@
 module EditablePages
   module PagesHelper
-    def edit_page_link(page_title)
-      link_to 'Edit Page', editable_pages.edit_page_path(Page.find!(page_title))
+    def edit_page_link(page_title, html_options = {})
+      link_to 'Edit Page', edit_editable_pages_page_path(Page.find!(page_title)), html_options
     end  
 
     # Renders the contents of an editable section

@@ -1,3 +1,5 @@
-EditablePages::Engine.routes.draw do
-  resources :pages
+Rails.application.routes.draw do
+  namespace :editable_pages do
+    resources :pages
+  end
 end

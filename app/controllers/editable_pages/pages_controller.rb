@@ -6,6 +6,10 @@ module EditablePages
       @pages = Page.all
     end
 
+    def edit
+      @page = Page.find(params[:id])      
+    end
+
     def update
       @page = Page.find(params[:id])
       flash[:notice] = 'User was successfully created.' if @page.update_attributes(params[:page])
