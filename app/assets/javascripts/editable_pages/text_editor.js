@@ -311,7 +311,7 @@ $(document).ready(function(){
     // If text editor is supported
     if (teSupported){
         // Create a function that makes a text editor with the controls we want
-        var addTextEditor = function(element){
+         function addTextEditor(element){
             var wrapper = $('<span class="text_editor_wrapper"></span>');
             var controls = $('<span class="text_editor_controls"></span>');
             var h1 = $('<span class="control" title="Heading 1">H1</span>')[0];
@@ -324,7 +324,6 @@ $(document).ready(function(){
             var unordered = $('<span class="control" title="Bullet Points"><img src="<%= asset_path "text_editor/unordered_list.png" %>"/></span>')[0];
             var table = $('<span class="control" title="Insert Table"><img src="<%= asset_path "text_editor/table.png" %>"/></span>')[0];
             var link = $('<span class="control" title="Insert Link"><img src="<%= asset_path "text_editor/link.png" %>" style="padding: 7px"/></span>')[0];
-            var contentSearchInput = $('<input class="popup_item_search" type="search" size="30" placeholder="Find + link to item, gallery, media, wiki" />')[0];
 
             controls.append(h1);
             controls.append(h2);
@@ -341,7 +340,6 @@ $(document).ready(function(){
             controls.append($('<span class="separator"></span>'));
             controls.append(link);
             controls.append($('<span class="separator"></span>'));
-//            controls.append(contentSearchInput);
 
             $(element).before(wrapper)
             $(element).addClass('text_editor');
