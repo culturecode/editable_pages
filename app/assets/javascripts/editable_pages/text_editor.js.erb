@@ -320,10 +320,10 @@ $(document).ready(function(){
             var bold = $('<span class="control" title="Bold"><b>B</b></span>')[0];
             var italic = $('<span class="control" title="Italic"><i>I</i></span>')[0];
             var blockquote = $('<span class="control" title="Quote">&rdquo;</span>')[0];
-            var ordered = $('<span class="control" title="Ordered List"><img src="<%= asset_path "text_editor/ordered_list.png" %>"/></span>')[0];
-            var unordered = $('<span class="control" title="Bullet Points"><img src="<%= asset_path "text_editor/unordered_list.png" %>"/></span>')[0];
-            var table = $('<span class="control" title="Insert Table"><img src="<%= asset_path "text_editor/table.png" %>"/></span>')[0];
-            var link = $('<span class="control" title="Insert Link"><img src="<%= asset_path "text_editor/link.png" %>" style="padding: 7px"/></span>')[0];
+            var ordered = $('<span class="control" title="Ordered List"><%= image_tag("ordered_list.png") %></span>')[0];
+            var unordered = $('<span class="control" title="Bullet Points"><%= image_tag("unordered_list.png") %></span>')[0];
+            var table = $('<span class="control" title="Insert Table"><%= image_tag("table.png") %></span>')[0];
+            var link = $('<span class="control" title="Insert Link"><%= image_tag("link.png", :style => 'padding: 7px') %></span>')[0];
 
             controls.append(h1);
             controls.append(h2);
